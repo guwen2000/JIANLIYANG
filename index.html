@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>简历 - 黑白极简风格</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" aria-label="头部信息">
+    <div class="container header-grid">
+      <div class="left-panel-header" aria-label="姓名与职业">
+        <h1 class="name" id="top-name" aria-label="姓名">李晨</h1>
+        <p class="title" aria-label="职业">全栈开发工程师</p>
+      </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="#about">简介</a>
+        <a href="#experience">经历</a>
+        <a href="#education">教育</a>
+        <a href="#skills">技能</a>
+        <a href="#portfolio">作品集</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container layout" id="main" role="main">
+    <aside class="left-panel" aria-label="个人信息区">
+      <div class="info-block">
+        <div class="name">李晨</div>
+        <div class="title">全栈开发工程师</div>
+      </div>
+      <ul class="contact-list">
+        <li>邮箱：you@example.com</li>
+        <li>电话：+86 138 0000 0000</li>
+        <li>网站：<span>https://example.com</span></li>
+        <li>GitHub：<span>https://github.com/your</span></li>
+      </ul>
+    </aside>
+
+    <section class="right-panel" aria-label="具体内容区">
+      <section id="about" class="section" aria-labelledby="about-title">
+        <h2 id="about-title">摘要 / 自我介绍</h2>
+        <p class="lead" aria-label="自我介绍文本">
+          具备前端与后端全栈能力，专注高可维护性与高效交付，追求极简且高可读的 UI/产品设计。
+        </p>
+      </section>
+
+      <section id="experience" class="section" aria-labelledby="experience-title">
+        <h2 id="experience-title">经历</h2>
+        <ul class="experience-list">
+          <li>
+            <strong>某科技公司</strong> — 全栈开发工程师 <em>（2019-2022）</em>
+            <ul>
+              <li>参与企业级应用的前端架构设计与实现</li>
+              <li>推动组件化、设计系统落地，提升团队开发效率</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section id="education" class="section" aria-labelledby="education-title">
+        <h2 id="education-title">教育背景</h2>
+        <ul class="education-list">
+          <li><strong>某大学</strong>，计算机科学学士 <em>（2015-2019）</em></li>
+        </ul>
+      </section>
+
+      <section id="skills" class="section" aria-labelledby="skills-title">
+        <h2 id="skills-title">技能与专长</h2>
+        <ul class="skills-list">
+          <li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li>
+          <li>CSS、设计系统</li>
+        </ul>
+      </section>
+
+      <section id="portfolio" class="section portfolio" aria-labelledby="portfolio-title" role="region">
+        <h2 id="portfolio-title">作品集（占位）</h2>
+        <div class="portfolio-grid" aria-label="作品集占位区">
+          <div class="card placeholder" aria-label="占位作品 1">占位 – 待填充作品 1</div>
+          <div class="card placeholder" aria-label="占位作品 2">占位 – 待填充作品 2</div>
+          <div class="card placeholder" aria-label="占位作品 3">占位 – 待填充作品 3</div>
+          <div class="card placeholder" aria-label="占位作品 4">占位 – 待填充作品 4</div>
+        </div>
+      </section>
+
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <h2 id="contact-title">语言与证书 / 联系方式</h2>
+        <p>语言：中文、英文（后续可扩展）</p>
+        <p>证书：待填写</p>
+        <p>联系：邮箱 / 电话 / 网站 / 社交</p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer" aria-label="页脚">
+    <div class="container">
+      <p>版权信息 • 说明：此页面用于在线查看简历内容。</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const reveals = document.querySelectorAll('.section');
+      reveals.forEach(sec => sec.classList.add('reveal'));
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) e.target.classList.add('visible');
+        });
+      }, { threshold: 0.08 });
+      reveals.forEach(r => obs.observe(r));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "name": "姓名",
+  "title": "职业",
+  "contact": {
+    "email": "you@example.com",
+    "phone": "+86 138 0000 0000",
+    "website": "https://example.com",
+    "linkedin": "",
+    "github": ""
+  },
+  "summary": "一句话自我介绍，突出核心能力与职业定位。",
+  "experience": [
+    {
+      "company": "公司名称",
+      "role": "职位",
+      "period": "YYYY-MM ~ YYYY-MM",
+      "points": ["要点描述1", "要点描述2"]
+    }
+  ],
+  "education": [
+    {
+      "school": "学校名称",
+      "degree": "学位",
+      "period": "YYYY-MM ~ YYYY-MM",
+      "details": ["课程/荣誉等"]
+    }
+  ],
+  "skills": ["技能1", "技能2", "技能3"],
+  "projects": [
+    {
+      "name": "项目名",
+      "desc": "项目简述",
+      "link": "https://..."
+    }
+  ],
+  "languages": ["中文", "英文"],
+  "certifications": ["证书1", "证书2"],
+  "notes": "其他补充信息",
+  "portfolio": []
+}
