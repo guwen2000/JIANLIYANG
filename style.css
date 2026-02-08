@@ -61,20 +61,84 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); fon
 
 /* 移动端优化 - 纯黑极简风格 */
 @media (max-width: 768px) {
-  /* 整体背景改为纯黑 */
+  /* 整体背景 */
   body {
     background: #000;
     color: #fff;
   }
   
-  /* 项目名称放大 */
+  /* Header垂直布局优化 */
+  .header-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .left-panel-header {
+    text-align: center;
+  }
+  
+  .name {
+    font-size: 28px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    color: #fff;
+  }
+  
+  .title {
+    font-size: 14px;
+    color: #888;
+    white-space: nowrap;
+  }
+  
+  /* 导航栏优化 */
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .nav a {
+    border: 1px solid #444;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* 隐藏重复的个人info-block */
+  .left-panel .info-block {
+    display: none;
+  }
+  
+  /* 左侧栏整体优化 */
+  .left-panel {
+    border-right: none;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .contact-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* 项目卡片优化 */
+  .project-card {
+    background: #111;
+    border: 1px solid #333;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  
   .project-card h3 {
     font-size: 20px;
     color: #fff;
     margin-bottom: 12px;
   }
   
-  /* 描述文字优化 */
   .project-card p {
     font-size: 15px;
     line-height: 1.8;
@@ -82,26 +146,25 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); fon
     margin-bottom: 20px;
   }
   
-  /* 图片网格改为单列（1张图占满宽度） */
+  /* 图片网格改为单列 */
   .project-card div[style*="grid-template-columns: 1fr 1fr"] {
     grid-template-columns: 1fr !important;
     gap: 15px;
   }
   
-  /* 图片高度增加 */
   .project-card img {
-    height: 280px !important;
+    height: 300px !important;
     border: 1px solid #333;
   }
   
-  /* 图片标题样式 */
+  /* 图片标题 */
   .project-card div p {
     font-size: 13px;
     color: #999;
     margin-top: 8px;
   }
   
-  /* 视频按钮优化 */
+  /* 视频按钮 */
   .project-card a[href*="xhslink"] {
     width: 100%;
     text-align: center;
@@ -110,42 +173,11 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); fon
     background: #fff;
     color: #000;
     border: 2px solid #fff;
+    display: block;
     margin-top: 10px;
   }
   
-  /* 项目卡片间距 */
-  .project-card {
-    background: #111;
-    border: 1px solid #333;
-    margin-bottom: 30px;
-    padding: 25px;
-  }
-  
-  /* 姓名和标题 */
-  .name {
-    font-size: 32px;
-    color: #fff;
-  }
-  
-  .title {
-    font-size: 16px;
-    color: #aaa;
-  }
-  
-  /* 导航栏优化 */
-  .nav {
-    flex-wrap: wrap;
-    gap: 10px;
-    font-size: 13px;
-  }
-  
-  .nav a {
-    color: #fff;
-    padding: 5px 10px;
-    border: 1px solid #444;
-  }
-  
-  /* 技能列表优化 */
+  /* 技能列表 */
   .skills-list li {
     background: #222;
     color: #fff;
@@ -161,6 +193,14 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); fon
     font-size: 15px;
     margin-bottom: 8px;
   }
+  
+  /* 章节标题 */
+  .section h2 {
+    font-size: 22px;
+    color: #fff;
+  }
 }
+
+
 
 
